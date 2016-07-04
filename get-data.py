@@ -17,7 +17,7 @@ def makeRandomList(n): # n is the length of the returned list
 def getData(function, r, filename):
 	print '\n' + filename
 	# GATHERING DATA
-	data = [["array_size","speed"]]
+	data = []
 	for x in r:
 		A = makeRandomList(x)
 		start = time.clock()
