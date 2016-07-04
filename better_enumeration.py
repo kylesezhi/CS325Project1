@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import time
 import csv
 from random import randint
@@ -17,7 +19,6 @@ def findMax(array,i):
 		if thisSum > currentMax: currentMax = thisSum
 	return currentMax
 		
-		
 def makeRandomList(n): # n is the length of the returned list
 	A = []
 	for x in range(n+1):
@@ -27,7 +28,7 @@ def makeRandomList(n): # n is the length of the returned list
 
 # GATHERING DATA
 data = [["array_size","speed"]]
-for x in range(1,11):
+for x in range(1,11): # 1-10
 	x = x*1000
 	A = makeRandomList(x)
 	start = time.clock()
