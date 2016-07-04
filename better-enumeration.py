@@ -1,4 +1,5 @@
 import time
+import csv
 from random import randint
 
 def better_enumeration(array):
@@ -23,9 +24,21 @@ def makeRandomList(n): # n is the length of the returned list
 		A.append(randint(-100,100))
 	return A
 	
-# TESTING
-A = makeRandomList(200)
-start = time.clock()
-better_enumeration(A)
-end = time.clock()
-print(str(200) + ": " + str(end - start))
+
+# GATHERING DATA
+data = [["array_size","speed"]]
+for x in range(1,11):
+	x = x*1000
+	A = makeRandomList(x)
+	start = time.clock()
+	better_enumeration(A)
+	end = time.clock()
+	speed = end - start
+	data.append([x,speed])
+	# print(str(x) + ": " + str(end - start))
+	
+# WRITING TO CSV
+with open('better-enumeration.csv', 'wb') as f:
+	writer = csv.writer(f, delimiter=',')
+	for line in data:
+		writer.writerow(line)
