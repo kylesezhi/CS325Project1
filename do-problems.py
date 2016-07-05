@@ -4,7 +4,7 @@ import ast
 import enumeration # Kyle
 import better_enumeration # Kyle
 # import divide_and_conquer
-# import linear_time # Steven
+import linear_time # Steven
 
 def readProblems():
 	problems = []
@@ -28,4 +28,4 @@ open("MSS_Results.txt", 'w').close() # zero out the results file
 solveProblems(problems, enumeration.enumeration)
 solveProblems(problems, better_enumeration.better_enumeration)
 # solveProblems(problems, divide_and_conquer.divide_and_conquer)
-# solveProblems(problems, linear_time.linear_time)
+solveProblems(problems, linear_time.linear_time)
