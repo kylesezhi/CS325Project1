@@ -6,7 +6,7 @@ from random import randint
 import enumeration
 import better_enumeration
 # import divide_and_conquer
-# import linear_time # Steven
+import linear_time # Steven
 
 def makeRandomList(n): # n is the length of the returned list
 	A = []
@@ -35,3 +35,4 @@ def getData(function, r, filename):
 #-------------------------------------------------------------------------------
 getData(enumeration.enumeration, range(100,1001,100), 'enumeration.csv')
 getData(better_enumeration.better_enumeration, range(1000,10001,1000), 'better_enumeration.csv')
+getData(linear_time.linear_time, range(100000,1000001,100000), 'linear_time.csv')
