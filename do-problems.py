@@ -3,7 +3,7 @@
 import ast
 import enumeration # Kyle
 import better_enumeration # Kyle
-# import divide_and_conquer
+import divideAndConquer
 import linear_time # Steven
 
 def readProblems():
@@ -27,5 +27,5 @@ problems = readProblems()
 open("MSS_Results.txt", 'w').close() # zero out the results file
 solveProblems(problems, enumeration.enumeration)
 solveProblems(problems, better_enumeration.better_enumeration)
-# solveProblems(problems, divide_and_conquer.divide_and_conquer)
+solveProblems(problems, divideAndConquer.maxSubArraySum)
 solveProblems(problems, linear_time.linear_time)
