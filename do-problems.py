@@ -27,5 +27,5 @@ problems = readProblems()
 open("MSS_Results.txt", 'w').close() # zero out the results file
 solveProblems(problems, enumeration.enumeration)
 solveProblems(problems, better_enumeration.better_enumeration)
-solveProblems(problems, divideAndConquer.maxSubArraySum)
+solveProblems(problems, divideAndConquer.divideAndConquer)
 solveProblems(problems, linear_time.linear_time)
