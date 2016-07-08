@@ -3,7 +3,7 @@ def divideAndConquer(array):
 
   def maxCrossingSum(array, l, m, h):
     thesum = 0
-    left_sum = 0
+    left_sum = -sys.maxint - 1
     maxLeft = 0
     maxRight = 0
     for i in range(m, l, -1):
@@ -13,7 +13,7 @@ def divideAndConquer(array):
         left_sum = thesum
  
     thesum = 0
-    right_sum = 0
+    right_sum = -sys.maxint - 1
     for j in range(m+1, h):
       thesum = thesum + array[j]
       if thesum > right_sum:
